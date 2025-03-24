@@ -16,10 +16,12 @@ It is intended for infrastructure/database engineers who want to build highly av
 - Cluster: 2-node RAC + optional Data Guard standby
 
 ## Directory Structure
+```
 oracle-setup/
 ├── rac-dg-on-rhel8/        # Oracle RAC + Data Guard on RHEL 8
 ├── rac-on-rhel9/           # Oracle RAC on RHEL 9
 └── common/                 # Common scripts and base configurations
+```
 
 ## How to Use
 Each subdirectory contains a step-by-step guide (setup-guide.md) and necessary configuration files/scripts.
