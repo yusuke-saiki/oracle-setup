@@ -19,7 +19,7 @@ It is intended for infrastructure/database engineers who want to build highly av
 ```
 oracle-setup/
 ├── rac-dg-on-rhel8/        # Oracle RAC + Data Guard on RHEL 8
-├── rac-on-rhel9/           # Oracle RAC on RHEL 9
+├── rac-on-rocky9/           # Oracle RAC on RHEL 9
 └── common/                 # Common scripts and base configurations
 ```
 
