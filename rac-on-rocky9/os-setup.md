@@ -81,6 +81,24 @@ echo NOZEROCONF=yes >> /etc/sysconfig/network
 cat /sys/kernel/mm/transparent_hugepage/enabled
 ```
 
+### Samba Share Setup (Optional)
+```
+mkdir -p -m 777 /home/public
+
+cp /etc/samba/smb.conf /etc/samba/smb.conf.org
+
+# Edit /etc/samba/smb.conf
+[public]
+    path = /home/public
+    writable = yes
+    guest ok = yes
+    guest only = yes
+    create mode = 0777
+    directory mode = 0777
+
+systemctl enable --now smb nmb
+```
+
 ### Kernel Parameter Tuning (HugePages, shmmax, etc.)
 ```
 MEMTOTAL=$(free -b | sed -n '2p' | awk '{print $2}')
